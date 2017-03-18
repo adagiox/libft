@@ -1,6 +1,6 @@
 NAME = libft.a
 
-FLAGS = -Wall -Werror -Wextra -c
+FLAGS = -Wall -Werror -Wextra -I. -c
 
 SRC = 	ft_strncpy.c \
 		ft_strcpy.c \
@@ -61,7 +61,7 @@ SRC = 	ft_strncpy.c \
 		ft_lstdelone.c \
 		ft_lstdel.c \
 		ft_lstiter.c \
-		ft_lstmap.c \
+		ft_lstmap.c
 
 OBJ = $(SRC:%.c=%.o)
 
@@ -69,15 +69,16 @@ all: $(NAME)
 
 $(NAME):
 	gcc $(FLAGS) $(SRC)
-	ar rc $(NAME) $(OBJ)
-	ranlib $(NAME)
+	ar rcs $(NAME) $(OBJ)
 
 clean:
 	rm -f $(OBJ)
+	touch abcdefg
+	rm -f abcdefg
 
 fclean: clean
-	rm -f $(NAME)
+	rm -rf $(NAME)
 
 re: fclean all
 
-.PHONY = all clean fclean re
+.PHONY: clean fclean all re
