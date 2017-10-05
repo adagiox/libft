@@ -73,8 +73,6 @@ $(NAME):
 
 clean:
 	rm -f $(OBJ)
-	touch abcdefg
-	rm -f abcdefg
 
 fclean: clean
 	rm -rf $(NAME)
