@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "./includes/ft_printf.h"
 
 void	print_left_uint(t_printf *flags, int num_space, int num_zero,
 	unsigned long long int i)
@@ -41,12 +41,10 @@ void	print_uint(t_printf *flags, int num_space, int num_zero,
 int		format_uint(t_printf *flags, unsigned long long int i)
 {
 	int num_space;
-	int num_pad;
 	int num_digits;
 	int num_zero;
 
 	num_space = 0;
-	num_pad = 0;
 	num_zero = 0;
 	set_uprefix(flags);
 	if ((num_digits = ft_ucountdigits(i)) < flags->prec)

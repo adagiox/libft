@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "./includes/ft_printf.h"
 
 int	convert_wc(t_printf *flags, va_list args)
 {

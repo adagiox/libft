@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "./includes/ft_printf.h"
 
 const char	g_hex[] = {'a', 'b', 'c', 'd', 'e', 'f',
 	'A', 'B', 'C', 'D', 'E', 'F'};

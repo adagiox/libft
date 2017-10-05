@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "./includes/ft_printf.h"
 
 int		zero_case_hex(t_printf *flags, unsigned long long int i)
 {
@@ -84,12 +84,10 @@ void	print_hex(t_printf *flags, int num_space, int num_zero,
 int		format_hex(t_printf *flags, unsigned long long int i)
 {
 	int num_space;
-	int num_pad;
 	int num_digits;
 	int num_zero;
 
 	num_space = 0;
-	num_pad = 0;
 	num_zero = 0;
 	if (zero_case_hex(flags, i) == 1)
 		return (1);

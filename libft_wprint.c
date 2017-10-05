@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "./includes/ft_printf.h"
 
 void	ft_wputnstr(t_printf *flags, wchar_t *ws, int n)
 {

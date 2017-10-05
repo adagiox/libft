@@ -22,8 +22,11 @@ OBJ = $(SRC:%.c=%.o)
 all: $(NAME)
 
 $(NAME):
-	gcc $(FLAGS) $(SRC)
-	ar rcs $(NAME) $(OBJ)
+	@echo "Compiling..."
+	@gcc $(FLAGS) $(SRC)
+	@echo "Archiving..."
+	@ar rcs $(NAME) $(OBJ)
+	@echo "$(NAME) has been created successfully."
 
 clean:
 	rm -f $(OBJ)

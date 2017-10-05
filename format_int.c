@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "./includes/ft_printf.h"
 
 int		zero_case_int(t_printf *flags, long long int i)
 {
@@ -65,12 +65,10 @@ void	print_int(t_printf *flags, int num_space, int num_zero, long long int i)
 int		format_int(t_printf *flags, long long int i)
 {
 	int num_space;
-	int num_pad;
 	int num_digits;
 	int num_zero;
 
 	num_space = 0;
-	num_pad = 0;
 	num_zero = 0;
 	if (set_prefix(flags, i) && zero_case_int(flags, i) == 1)
 		return (1);
